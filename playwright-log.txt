@@ -1,0 +1,44 @@
+{"level":30,"time":"2022-10-23T18:45:16.501Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Listening on 54664"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:26863:23)
+    at PlaywrightServer.getActiveBrowser (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:24824:79)
+    at PlaywrightServer.<anonymous> (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:25202:98)
+    at step (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:24784:23)
+    at Object.next (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:24765:53)
+    at c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:24759:71
+    at new Promise (<anonymous>)
+    at __webpack_modules__../node/playwright-wrapper/grpc-service.ts.__awaiter (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:24755:12)
+    at PlaywrightServer.__webpack_modules__../node/playwright-wrapper/grpc-service.ts.PlaywrightServer.setTimeout (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:25193:16)
+    at handleUnary (c:\users\lanre\appdata\local\programs\python\python38\lib\site-packages\Browser\wrapper\index.js:18454:13)
+=============================================================
+{"level":30,"time":"2022-10-23T18:45:18.433Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-10-23T18:45:18.445Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active context"}
+{"level":30,"time":"2022-10-23T18:45:19.256Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Video path: undefined"}
+{"level":30,"time":"2022-10-23T18:45:19.257Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active page"}
+{"level":30,"time":"2022-10-23T18:45:29.535Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: xpath=//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a"}
+{"level":30,"time":"2022-10-23T18:45:31.960Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=email_create"}
+{"level":30,"time":"2022-10-23T18:45:32.702Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=SubmitCreate"}
+{"level":30,"time":"2022-10-23T18:45:32.798Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=customer_firstname"}
+{"level":30,"time":"2022-10-23T18:45:34.592Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=customer_lastname"}
+{"level":30,"time":"2022-10-23T18:45:34.643Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=passwd"}
+{"level":30,"time":"2022-10-23T18:45:34.691Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=days"}
+{"level":30,"time":"2022-10-23T18:45:34.729Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=months"}
+{"level":30,"time":"2022-10-23T18:45:34.761Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=years"}
+{"level":30,"time":"2022-10-23T18:45:34.794Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=firstname"}
+{"level":30,"time":"2022-10-23T18:45:34.831Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=lastname"}
+{"level":30,"time":"2022-10-23T18:45:34.874Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=address1"}
+{"level":30,"time":"2022-10-23T18:45:34.913Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=city"}
+{"level":30,"time":"2022-10-23T18:45:34.951Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=id_state"}
+{"level":30,"time":"2022-10-23T18:45:35.224Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=postcode"}
+{"level":30,"time":"2022-10-23T18:45:35.260Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=phone_mobile"}
+{"level":30,"time":"2022-10-23T18:45:35.295Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: id=alias"}
+{"level":30,"time":"2022-10-23T18:45:35.328Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Page|Frame|Element resolved elementSelector: xpath=//span[text() = 'Register']"}
+{"level":30,"time":"2022-10-23T18:45:37.724Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Strict mode is: true"}
+{"level":30,"time":"2022-10-23T18:45:38.083Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Retrieved text for element xpath=//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span containing Lola Gold"}
+{"level":30,"time":"2022-10-23T18:45:38.092Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active context"}
+{"level":30,"time":"2022-10-23T18:45:38.093Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changing current active page"}
+{"level":30,"time":"2022-10-23T18:45:38.093Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active page"}
+{"level":30,"time":"2022-10-23T18:45:38.108Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active context"}
+{"level":30,"time":"2022-10-23T18:45:38.108Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changing current active page"}
+{"level":30,"time":"2022-10-23T18:45:38.108Z","pid":130672,"hostname":"LAPTOP-LI64RMSV","msg":"Changed active page"}

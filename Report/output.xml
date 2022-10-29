@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.8.10 on win32)" generated="20221023 21:46:53.632" rpa="false" schemaversion="2">
+<suite id="s1" name="createUser" source="C:\Users\lanre\PycharmProjects\browserlib_automationPractice\createUser.robot">
+<test id="s1-t1" name="Create new account">
+<kw name="Set Browser Timeout" library="Browser">
+<arg>30 seconds</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" starttime="20221023 21:46:56.776" endtime="20221023 21:46:56.787"/>
+</kw>
+<kw name="Go to the Login Page" library="Browserlib_keyword">
+<kw name="New Browser" library="Browser">
+<arg>Chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20221023 21:46:56.789" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Users\\lanre\\PycharmProjects\\browserlib_automationPractice\\Report\\browser\\traces\\cfe8ce7c-b97b-416a-a16b-dfcdcea1f415"}</msg>
+<msg timestamp="20221023 21:46:58.698" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Users\\lanre\\PycharmProjects\\browserlib_automationPractice\\Report\\browser\\traces\\cfe8ce7c-b97b-416a-a16b-dfcdcea1f415"}</msg>
+<status status="PASS" starttime="20221023 21:46:56.788" endtime="20221023 21:46:58.698"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://automationpractice.com/index.php?</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20221023 21:47:12.815" level="INFO">Successfully initialized new page object and opened url: http://automationpractice.com/index.php?</msg>
+<msg timestamp="20221023 21:47:12.816" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20221023 21:46:58.699" endtime="20221023 21:47:12.816"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:12.816" endtime="20221023 21:47:16.730"/>
+</kw>
+<status status="PASS" starttime="20221023 21:46:56.788" endtime="20221023 21:47:16.731"/>
+</kw>
+<kw name="Enter email for new user and click the create account button" library="Browserlib_keyword">
+<kw name="Email" library="FakerLibrary">
+<var>${email}</var>
+<msg timestamp="20221023 21:47:16.733" level="INFO">${email} = tjohnson@example.org</msg>
+<status status="PASS" starttime="20221023 21:47:16.732" endtime="20221023 21:47:16.733"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221023 21:47:16.733" level="INFO">tjohnson@example.org</msg>
+<status status="PASS" starttime="20221023 21:47:16.733" endtime="20221023 21:47:16.733"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20221023 21:47:16.734" level="INFO">${email} = tjohnson@example.org</msg>
+<status status="PASS" starttime="20221023 21:47:16.734" endtime="20221023 21:47:16.734"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=email_create</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:16.735" level="INFO">Fills the text 'tjohnson@example.org' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:16.734" endtime="20221023 21:47:17.507"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>id=SubmitCreate</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:17.507" endtime="20221023 21:47:17.826"/>
+</kw>
+<status status="PASS" starttime="20221023 21:47:16.731" endtime="20221023 21:47:17.826"/>
+</kw>
+<kw name="Enter firstname, lastname and password" library="Browserlib_keyword">
+<arg>Lola</arg>
+<arg>Gold</arg>
+<arg>testing</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${USER_FIRSTNAME}</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:17.837" level="INFO">Fills the text 'Lola' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:17.837" endtime="20221023 21:47:20.954"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${USER_LASTNAME}</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:20.955" level="INFO">Fills the text 'Gold' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:20.955" endtime="20221023 21:47:21.007"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${NEW_USER_PASSWD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.007" level="INFO">Fills the text 'testing' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.007" endtime="20221023 21:47:21.056"/>
+</kw>
+<status status="PASS" starttime="20221023 21:47:17.836" endtime="20221023 21:47:21.056"/>
+</kw>
+<kw name="Select user date of birth in days, months and Years" library="Browserlib_keyword">
+<kw name="Select Options By" library="Browser">
+<arg>${DOB_DAYS}</arg>
+<arg>Value</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:21.059" endtime="20221023 21:47:21.112"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${DOB_MONTHS}</arg>
+<arg>index</arg>
+<arg>9</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:21.112" endtime="20221023 21:47:21.152"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${DOB_YEARS}</arg>
+<arg>Value</arg>
+<arg>1990</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:21.152" endtime="20221023 21:47:21.195"/>
+</kw>
+<status status="PASS" starttime="20221023 21:47:21.058" endtime="20221023 21:47:21.196"/>
+</kw>
+<kw name="Enter latter firstname and lastname" library="Browserlib_keyword">
+<arg>Lola</arg>
+<arg>Gold</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${LATTER_FIRSTNAME}</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.199" level="INFO">Fills the text 'Lola' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.198" endtime="20221023 21:47:21.246"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${LATTER_LASTNAME}</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.247" level="INFO">Fills the text 'Gold' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.246" endtime="20221023 21:47:21.309"/>
+</kw>
+<status status="PASS" starttime="20221023 21:47:21.197" endtime="20221023 21:47:21.310"/>
+</kw>
+<kw name="Enter address, City, State, postcoode, mobile, alias and click on register" library="Browserlib_keyword">
+<kw name="Fill Text" library="Browser">
+<arg>${USER_ADDRESS}</arg>
+<arg>Testing street</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.316" level="INFO">Fills the text 'Testing street' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.315" endtime="20221023 21:47:21.372"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${USER_CITY}</arg>
+<arg>Chicago</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.372" level="INFO">Fills the text 'Chicago' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.372" endtime="20221023 21:47:21.427"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${USER_STATE}</arg>
+<arg>Text</arg>
+<arg>Illinois</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:21.427" endtime="20221023 21:47:21.607"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${USER_POSTCODE}</arg>
+<arg>00000</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.608" level="INFO">Fills the text '00000' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.608" endtime="20221023 21:47:21.672"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${USER_MOBILE}</arg>
+<arg>123456789</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.672" level="INFO">Fills the text '123456789' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.672" endtime="20221023 21:47:21.729"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${ADD_ALIAS}</arg>
+<arg>QA House</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221023 21:47:21.730" level="INFO">Fills the text 'QA House' in the given field.</msg>
+<status status="PASS" starttime="20221023 21:47:21.730" endtime="20221023 21:47:21.799"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${REGISTER_BTN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:21.800" endtime="20221023 21:47:24.790"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a/span</arg>
+<arg>==</arg>
+<arg>Lola Gold</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221023 21:47:24.791" endtime="20221023 21:47:25.192"/>
+</kw>
+<status status="PASS" starttime="20221023 21:47:21.315" endtime="20221023 21:47:25.192"/>
+</kw>
+<status status="PASS" starttime="20221023 21:46:56.772" endtime="20221023 21:47:25.193"/>
+</test>
+<doc>test based on browserlibrary keywords</doc>
+<status status="PASS" starttime="20221023 21:46:53.637" endtime="20221023 21:47:25.318"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="createUser">createUser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
