@@ -75,3 +75,8 @@ Enter address, City, State, postcoode, mobile, alias and click on register
      Click  ${REGISTER_BTN}
      Get Text  xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a/span  ==    Lola Gold
 
+Enter existing email and click create account button
+    [Arguments]   ${email}
+    Fill Text  id=email_create   ${email}
+    Click  id=SubmitCreate
+    Get Text    xpath=//*[@id="create_account_error"]/ol/li  ==  An account using this email address has already been registered. Please enter a valid password or request a new one.
