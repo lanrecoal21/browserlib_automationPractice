@@ -27,6 +27,20 @@ ${DELET_ADD_BTN}  xpath=//*[@id="center_column"]/div[1]/div/div[2]/ul/li[9]/a[2]
 ${LATTER_FIRSTNAME}  id=firstname
 ${LATTER_LASTNAME}   id=lastname
 
+${LOGIN_USERNAME_FIELD}    id=email
+${LOGIN_PASSW_FIELD}       id=passwd
+${LOGIN_BTN}       id=SubmitLogin
+${MYPERSNLINFO_FIELD}   xpath=//*[@id="center_column"]/div/div[1]/ul/li[4]/a/span
+${CURRENTPASSWD_FIELD}     id=old_passwd
+${NEWPASSWD_CHANGEPASSWD_FIELD}   id=passwd
+${CONFIRMPASSWDCHANGE}    id=confirmation
+${USER_EMAIL}      ininnchris@gmail.com
+${USER_PASSWD}     Munachi1966
+${NEWPASSWD}       munachi
+${SAVE_CHANGGEPASSWD}   xpath=//*[@id="center_column"]/div/form/fieldset/div[11]/button/span
+
+
+
 
 
 *** Keywords ***
@@ -80,3 +94,37 @@ Enter existing email and click create account button
     Fill Text  id=email_create   ${email}
     Click  id=SubmitCreate
     Get Text    xpath=//*[@id="create_account_error"]/ol/li  ==  An account using this email address has already been registered. Please enter a valid password or request a new one.
+
+Create a new password, enter existing email and password
+     fill text  ${LOGIN_USERNAME_FIELD}     ${USER_EMAIL}
+     fill text  ${LOGIN_PASSW_FIELD}        ${USER_PASSWD}
+     click      ${LOGIN_BTN}
+     click      ${MYPERSNLINFO_FIELD}
+     fill text  ${CURRENTPASSWD_FIELD}      ${USER_PASSWD}
+     fill text  ${NEWPASSWD_CHANGEPASSWD_FIELD}   ${NEWPASSWD}
+     fill text  ${CONFIRMPASSWDCHANGE}     ${NEWPASSWD}
+     click      ${SAVE_CHANGGEPASSWD}
+
+
+
+Verify that password was changed successfully
+    fill text  ${LOGIN_USERNAME_FIELD}     ${USER_EMAIL}
+    fill text  ${LOGIN_PASSW_FIELD}         ${NEWPASSWD}
+    click      ${LOGIN_BTN}
+
+Change the password to the initial password
+
+     fill text  ${LOGIN_USERNAME_FIELD}     ${USER_EMAIL}
+     fill text  ${LOGIN_PASSW_FIELD}        ${NEWPASSWD}
+     click      ${LOGIN_BTN}
+     click      ${MYPERSNLINFO_FIELD}
+     fill text  ${CURRENTPASSWD_FIELD}      ${NEWPASSWD}
+     fill text  ${NEWPASSWD_CHANGEPASSWD_FIELD}   ${USER_PASSWD}
+     fill text  ${CONFIRMPASSWDCHANGE}     ${USER_PASSWD}
+     click      ${SAVE_CHANGGEPASSWD}
+
+
+
+
+
+
