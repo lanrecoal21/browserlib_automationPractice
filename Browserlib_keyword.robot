@@ -26,6 +26,10 @@ ${SAVE_BTN}  id=submitAddress
 ${DELET_ADD_BTN}  xpath=//*[@id="center_column"]/div[1]/div/div[2]/ul/li[9]/a[2]/span
 ${LATTER_FIRSTNAME}  id=firstname
 ${LATTER_LASTNAME}   id=lastname
+${OUR_STORE}    xpath=//*[@id="block_various_links_footer"]/ul/li[4]/a
+${LOCATION_FIELD}    id=addressInput
+${RADIUS_SELECT}   id=radiusSelect
+${CLICK_SEARCH}    xpath=//*[@id="center_column"]/div[2]/div[3]/button
 
 
 
@@ -80,3 +84,12 @@ Enter existing email and click create account button
     Fill Text  id=email_create   ${email}
     Click  id=SubmitCreate
     Get Text    xpath=//*[@id="create_account_error"]/ol/li  ==  An account using this email address has already been registered. Please enter a valid password or request a new one.
+
+
+Click Our Store on the footer and enter Location ,Radius and Search
+     Click    ${OUR_STORE}
+     Handle Future Dialogs    accept
+     Fill Text    ${LOCATION_FIELD}    Miami
+     Select Options By   ${RADIUS_SELECT}      Value   100
+     Click    ${CLICK_SEARCH}
+     Handle Future Dialogs    dismiss

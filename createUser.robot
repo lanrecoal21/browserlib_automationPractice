@@ -14,6 +14,11 @@ Create new account
      Enter address, City, State, postcoode, mobile, alias and click on register
 
 Existing email should not be able to creat an account
-    [Tags]  ola
+    #[Tags]  ola
     Go to the Login Page
     Enter existing email and click create account button   lanre_april@gmail.com
+
+Verify Our Store Functionality
+     [Tags]  obyno
+      Go to the Login page
+      Click Our Store on the footer and enter Location ,Radius and Search
