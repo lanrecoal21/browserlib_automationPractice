@@ -2,6 +2,7 @@
 Documentation    test based on browserlibrary keywords
 Library  Browser
 Library  FakerLibrary
+Library    SeleniumLibrary
 
 *** Variables ***
 ${CREATE_USER_EMAIL}  id=email_create
@@ -80,3 +81,13 @@ Enter existing email and click create account button
     Fill Text  id=email_create   ${email}
     Click  id=SubmitCreate
     Get Text    xpath=//*[@id="create_account_error"]/ol/li  ==  An account using this email address has already been registered. Please enter a valid password or request a new one.
+
+
+
+Adding product to cart after login with correct credentials
+  [Arguments] ${email}   ${password}
+  log  ${email}
+  Fill Text  ${password}
+  Click Button  id=SubmitLogin
+  Click Button    T-shirts
+  Click Button    Add to cart

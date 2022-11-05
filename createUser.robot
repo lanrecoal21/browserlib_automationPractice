@@ -17,3 +17,11 @@ Existing email should not be able to creat an account
     [Tags]  ola
     Go to the Login Page
     Enter existing email and click create account button   lanre_april@gmail.com
+
+
+
+Adding product to cart after login with correct credentials
+    [Tags]  mimirobo
+    Go to the Login Page
+    Enter existing email and password and click on the sign in button  lanre_april@gmal.com   testing
+
